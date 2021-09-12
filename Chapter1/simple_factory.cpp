@@ -1,5 +1,6 @@
 #include "simple_factory.h"
 
+#include <iostream>
 #include <stdexcept>
 
 double Operation::GetA() const { return _numberA; }
@@ -11,6 +12,10 @@ double Operation::GetB() const { return _numberB; }
 void Operation::SetB(double val) { _numberB = val; }
 
 double Operation::GetResult() { return 0; }
+
+Operation::Operation() { std::cout << "Create Operation\n"; }
+
+Operation::~Operation() { std::cout << "Delete Operation\n"; }
 
 class OperationAdd : public Operation {
   double GetResult() override;

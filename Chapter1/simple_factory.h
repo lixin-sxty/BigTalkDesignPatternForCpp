@@ -10,6 +10,9 @@ class Operation {
   double _numberB = 0;
 
  public:
+  Operation();
+  virtual ~Operation();
+
   double GetA() const;
   void SetA(double);
   double GetB() const;
@@ -19,6 +22,7 @@ class Operation {
 
 class OperatorFactory {
  public:
+  // Only support '+', '-', '*', '/'
   static Operation* createOperate(const std::string& type);
 };
 #endif  // SIMPLE_FACTORY_H

@@ -1,11 +1,14 @@
 #include "strategy.h"
 
+#include <iostream>
 #include <stdexcept>
 
 class CashSuper {
  public:
+  CashSuper() { std::cout << "Create CashSuper.\n"; }
+  virtual ~CashSuper() { std::cout << "Delete CashSuper.\n"; }
+
   virtual double acceptCash(double money) = 0;
-  virtual ~CashSuper(){};
 };
 
 class CashNormal : public CashSuper {
