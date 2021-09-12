@@ -7,3 +7,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 # Add sub directories
 add_subdirectory(Chapter1)
+add_subdirectory(Chapter2)
