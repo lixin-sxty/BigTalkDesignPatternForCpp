@@ -4,5 +4,5 @@
 
 将不变的顶层逻辑抽象到基类中，实现了代码复用。
 
-UML图
+UML图<br>
 ![factory_method](template_method.png)
